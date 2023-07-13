@@ -1,0 +1,93 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: yellow;
+}
+
+.container {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-color: red;
+	overflow: hidden; /* Add this to hide the scroll part */
+}
+
+nav {
+	position: fixed;
+	width: 100vw;
+	height: 50px;
+	background: yellow;
+	z-index: 1;
+	box-shadow: slateblue;
+}
+
+.content {
+	position: relative;
+	background-color: green;
+	padding-top: 10px;
+	border: 2px solid blue;
+	height: calc(100vh - 100px);
+	width: 500px;
+	/* position: relative; */
+	top: 100px;
+	left: 20px;
+	overflow: hidden;
+	overscroll-behavior: contain;
+	contain: content; /* so that fixedChild is fixed wrt content and not the body*/
+}
+
+.fixedChild {
+	height: auto;
+	width: auto;
+	background-color: brown;
+	position: fixed;
+	/* position: relative; */
+	top: 0px;
+	left: 0px;
+	border: 5px solid tan;
+}
+.scrollContent {
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
+}
+
+.content2 {
+	position: relative;
+	top: -300px;
+	left: 600px;
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	/* overflow: scroll; */
+	/* //* make the container's overflow: hidden; */
+	background-color: limegreen;
+	overscroll-behavior: contain;
+	contain: content;
+}
+.scrollContent2 {
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
+}
+.fixedChild2Out {
+	position: fixed;
+	height: auto;
+	width: 90px;
+	top: 0;
+	left: 20%;
+	background-color: blue;
+	z-index: 10;
+}
+.fixedChild2In {
+	position: fixed;
+	height: auto;
+	width: 90px;
+	top: 10px;
+	left: 20%;
+	background-color: blueviolet;
+	z-index: 1;
+}
