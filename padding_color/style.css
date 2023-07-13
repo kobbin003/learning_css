@@ -1,0 +1,41 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: yellow;
+	height: 100vh;
+	width: 100vw;
+	padding-left: 50px;
+}
+.transparentpadding {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	/* left: 800px;
+	top: -300px; */
+	background-color: teal;
+	border: 5px solid black;
+	background-clip: content-box;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+.paddingcolor {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	/* left: 800px;
+	top: -200px; */
+	background-color: teal;
+	border: 5px solid black;
+	padding: 5px;
+}
+
+.paddingcolor_child {
+	height: inherit;
+	width: inherit;
+	background-color: violet;
+	/* colors only the content without the padding */
+}
