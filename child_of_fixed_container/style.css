@@ -1,0 +1,24 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+}
+.parent {
+	position: fixed;
+	height: 500px;
+	width: 200px;
+	left: 200px;
+	background-color: crimson;
+}
+.child {
+	position: fixed;
+	position: relative;
+	position: absolute;
+	height: 100px;
+	width: 50px;
+	left: 250px;
+	background-color: orchid;
+}
