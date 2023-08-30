@@ -1,0 +1,167 @@
+body {
+	background-color: cornflowerblue;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+details {
+	position: relative;
+	border-radius: 5px;
+	background-color: transparent;
+	/* width: 80vw; */
+	flex: 1;
+	margin-bottom: 10px; /* to compensate for ul's position*/
+	> summary {
+		cursor: pointer;
+		outline: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		> p {
+			background-color: burlywood;
+		}
+		> button {
+			cursor: pointer;
+			background-color: burlywood;
+			border: none;
+			border-radius: 5px;
+		}
+	}
+	> summary::marker {
+		content: none;
+	}
+	> ul {
+		position: relative;
+		top: 10px; /* this is to add space between summary and the content AND dont forget to keep the details background as "transparent"*/
+		list-style: none;
+		background-color: bisque;
+		> li {
+			cursor: pointer;
+			border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+		}
+	}
+}
+
+#accordion {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+#title {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	> p {
+		background-color: goldenrod;
+	}
+	> button {
+		background-color: goldenrod;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+#accordion2 {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+#title2 {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	> p {
+		background-color: goldenrod;
+	}
+	> button {
+		background-color: goldenrod;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+ul {
+	list-style: none;
+	max-height: 0;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 0.3s ease-out, max-height 0.3s ease-in-out;
+	/* transition-delay: 0.1s; */
+	> li {
+		transform: scale(1, 0);
+		transition: transform 0.3s ease-in;
+	}
+}
+#title2:hover + ul {
+	max-height: 999px;
+	transform: scale(1, 1);
+	transform-origin: top;
+	transition: transform 0.3s ease-in, max-height 0.3s ease-in-out;
+	/* transition-delay: 0.1s; */
+	> li {
+		transform: scale(1, 1);
+		transition: transform 0.3s ease-in;
+	}
+}
+.theul {
+	list-style: none;
+	background-color: tan;
+}
+/* using only max-height */
+.hideul {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s ease-in-out;
+}
+.showul {
+	max-height: 999px;
+	overflow: visible;
+	transition: max-height 1s ease-in-out;
+}
+
+/* both max-height and scale*/
+.hideul2 {
+	max-height: 0;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 0.3s ease-out, max-height 0.3s ease-in-out;
+	/* transition-delay: 0.1s; */
+	> li {
+		transform: scale(1, 0);
+		transition: transform 0.3s ease-in;
+	}
+}
+.showul2 {
+	max-height: 999px;
+	transform: scale(1, 1);
+	transform-origin: top;
+	transition: transform 0.3s ease-in, max-height 0.3s ease-in-out;
+	/* transition-delay: 0.1s; */
+	> li {
+		transform: scale(1, 1);
+		transition: transform 0.3s ease-in;
+	}
+}
+/* using only scale, [but it does not remove the space]*/
+/* .hideul {
+	transform: scale(1, 0);
+	transform-origin: top;
+
+	transition: transform 0.1s ease-in;
+	transition-delay: 0.1s;
+	> li {
+		transform: scale(1, 0);
+	}
+}
+.showul {
+	transform: scale(1, 1);
+	transform-origin: top;
+	transition: transform 0.1s ease-in;
+	transition-delay: 0.1s;
+	> li {
+		transform: scale(1, 1);
+	}
+} */

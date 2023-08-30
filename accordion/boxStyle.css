@@ -1,0 +1,17 @@
+#box-container {
+	border: 3px solid white;
+}
+/* It is important to know that the scale property 
+does not cause other elements to flow around it like the 
+scale() transform function does. That means an element’s 
+scale does not result in the elements around it reflowing 
+in order to make additional (or less) room available based on 
+the scale of that element.*/
+
+/* That's why, adding transform to #box does not move the border of the #box-container*/
+#box {
+	height: 200px;
+	width: 200px;
+	background-color: rgba(0, 0, 255, 0.248);
+	transform: scale(1.1, 1.1);
+}
