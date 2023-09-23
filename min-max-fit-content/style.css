@@ -1,0 +1,23 @@
+.container {
+	width: 80px;
+	border: 1px solid darkturquoise;
+	/* overflow: hidden; */
+}
+
+/* width of the content without word-break */
+.max-content-box {
+	width: max-content;
+	background-color: lightblue;
+}
+
+/* width of smallest content/word */
+.min-content-box {
+	width: min-content;
+	background-color: red;
+}
+
+/* width of it's parent container BUT not less than min-content*/
+.fit-content-box {
+	width: fit-content;
+	background-color: cadetblue;
+}

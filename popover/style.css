@@ -5,3 +5,9 @@
 	height: 30px;
 	width: 30px;
 }
+
+#pop-info {
+	position: fixed;
+	top: 0;
+	left: 0;
+}

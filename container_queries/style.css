@@ -13,6 +13,9 @@
 	font-size: 10cqw; /* 10% of the .post width*/
 }
 @container sidebar (min-width:700px) {
+	.card {
+		background-color: pink;
+	}
 	/* the style on .card h2 will come into effect when .post's width > 700px*/
 	.card h2 {
 		font-size: 5cqw; /* 5% of the .post width*/
